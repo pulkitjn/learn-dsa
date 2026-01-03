@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/pujain/Desktop/prac/Dsa/Patterns/patterns'
+relocations:     []
+...
