@@ -1,0 +1,25 @@
+Recursion is when a function calls itself until a specified condition is met
+
+
+void f() {
+    print(1)
+    f()
+}
+This function has no end, it will keep calling itself. Stack will keep getting accumulated with more
+and more items resulting it getting full where eventually it will have no space to store more function calls
+
+Gotta add a base condition
+
+count = 0
+void f() {
+    if (count == 4) {
+        return;
+    }
+    print(count);
+    count++;
+    f();
+}
+
+Recursion Tree
+f() -> f() -> f() -> f()
+count = 1, count = 2, count = 3, count = 4
