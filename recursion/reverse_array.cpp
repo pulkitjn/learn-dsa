@@ -3,7 +3,7 @@
 /*
 n = 5
 0 1 2 3 4
-i with n-i-1 i till n/2
+i with n-i-1 less than n/2
 4 3 2 1 0
 0 1 2 3 4 5
 
