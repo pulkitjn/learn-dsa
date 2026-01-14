@@ -1,0 +1,63 @@
+for number count in an array where max out of the array number is known and is not too high, we can use hashing using arrays directly.
+Here
+a[i] would be the array, i>=0 and i<n, max value of a[i] should be capped to a lesser order number
+cnt array would store the count of each number in array
+
+For ascii characters we can directly use an array of 256 size since that would be generally sufficient
+And mapping could directly work as cnt[c]
+
+For long range numbers we need to use map DS.
+General map DS is sorted and all operations are O(logn)
+But the unordered map DS is not sorted, general case time complexity is O(1) but in worst case it could till O(n) since it could suffer collisions
+
+Hashing
+* Division Method
+* Folding Method
+* Mid Square Method
+
+{2, 5, 16, 28, 139}
+
+In division method, you fix the array size.
+
+Here if we fix 10 size array now, for each number we do 2%10 increase the count at that index
+{
+    0 -> 1
+    1 -> 
+    2 ->
+    3 ->
+    4 ->
+    5 -> 1
+    6 -> 1
+    7 ->
+    8 -> 1
+    9 -> 1
+}
+
+
+Now if we have multiple numbers with same modulo, we can do chaining
+{2, 5, 16, 28, 139, 19, 39}
+{
+    0
+    1
+    2 -> 2
+    3
+    4
+    5 -> 5
+    6 -> 6
+    7 -> 
+    8 -> 28, 
+    9 -> 19, 39, 139
+}
+
+So we insert in the chain whose index matches the modulo calculation 
+For counting you have to do 139%10 = 9 and now apply some of algorithms to calc the count since items in list are in sorted order
+
+What do we mean by collision?
+Whatever hash we use if all the keys end up in the same map, then for calculating the count, we have to iterate through
+the same array
+
+In map, we can have any kind of data type as key like pair<int, int> or vector<int>
+In unordered map, it is limited to integer, double, string
+
+
+
